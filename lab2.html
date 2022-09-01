@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script>
+        function compute() {
+            let b1 = document.getElementById("box1").value;
+            let b2 = document.getElementById("box2").value;
+            let a = document.getElementById("ans");
+            let sel = document.getElementById("operators").value;
+            if (sel == "p") {
+                ans.value = parseInt(b1) + parseInt(b2);
+            }
+            else if (sel == "min") {
+                ans.value = parseInt(b1) - parseInt(b2);
+            }
+            else if (sel == "mul") {
+                ans.value = parseInt(b1) * parseInt(b2);
+            }
+            else if (sel == "d") {
+                ans.value = parseInt(b1) / parseInt(b2);
+            }
+            a.innerHTML = ans;
+        }
+    </script>
+</head>
+
+<body>
+    <p>
+        <input type="text" id="box1">
+        <select id="operators">
+            <option value="p">+</option>
+            <option value="min">-</option>
+            <option value="mul">*</option>
+            <option value="d">/</option>
+        </select> <input type="text" id="box2">
+        = <input type="text" id="ans">
+        <input type="button" id="go" value="Compute" onclick="compute()">
+    </p>
+</body>
+
+</html>
